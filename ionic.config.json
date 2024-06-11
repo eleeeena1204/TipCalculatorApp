@@ -1,0 +1,7 @@
+{
+  "name": "TipCalculatorApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
