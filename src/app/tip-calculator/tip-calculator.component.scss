@@ -1,0 +1,79 @@
+.card {
+    background: rgba(255, 255, 255, 0.2); /* Fondo blanco muy transparente */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 1000px;
+    backdrop-filter: blur(10px); /* Efecto de desenfoque de fondo */
+    -webkit-backdrop-filter: blur(10px); /* Soporte para Safari */
+  }
+  
+  .card ion-item {
+    --background: transparent;
+    margin-bottom: 15px;
+  }
+  
+  .card ion-label {
+    color: #2C3E50;
+  }
+  
+  .card ion-input {
+    --color: #2C3E50;
+  }
+  
+  .result-container {
+    text-align: center;
+    margin-top: 15px;
+  }
+  
+  .result {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #2C3E50;
+    padding: 10px 0;
+  }
+  
+  .calculate-button {
+    --background: linear-gradient(135deg, #74c3f8, #d78af8);
+    color: white;
+    transition: background 0.3s, box-shadow 0.3s;
+  }
+  
+  .calculate-button:hover {
+    --background: linear-gradient(135deg, #74c3f8, #d78af8);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .img {
+    width: 100%;
+    max-width: 150px;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 30px;
+  }
+  
+  .tip-label {
+    color: #2C3E50;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    text-align: left;
+    width: 100%;
+    margin-left: 16px;
+  }
+  
+  .tip-radio-group {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    margin-left: 16px;
+  }
+  
+  .tip-radio-group ion-item {
+    --background: transparent;
+    flex: 1;
+    max-width: 33%;
+    text-align: center;
+    border: none;
+  }
+  

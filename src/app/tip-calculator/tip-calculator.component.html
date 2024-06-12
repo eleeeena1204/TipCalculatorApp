@@ -1,0 +1,43 @@
+<ion-img class="img" src="assets/icon/LogoApp.png"></ion-img>
+<div class="card">
+  <ion-item>
+    <ion-input label="Importe de la cuenta" [(ngModel)]="totalAmount" type="number" placeholder="Introduzca el importe"></ion-input>
+  </ion-item>
+
+  <ion-item lines="none">
+    <ion-label class="tip-label">Propina</ion-label>
+  </ion-item>
+  <ion-radio-group [(ngModel)]="tipPercentage" class="tip-radio-group">
+    <ion-item lines="none">
+      <ion-label>15%</ion-label>
+      <ion-radio slot="start" value="15"></ion-radio>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label>20%</ion-label>
+      <ion-radio slot="start" value="20"></ion-radio>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label>25%</ion-label>
+      <ion-radio slot="start" value="25"></ion-radio>
+    </ion-item>
+  </ion-radio-group>
+
+  <ion-item>
+    <ion-label>Personalizada: {{tipPercentage}}%</ion-label>
+    <ion-range min="0" max="100" step="1" [(ngModel)]="tipPercentage">
+      <ion-label slot="start">0%</ion-label>
+      <ion-label slot="end">100%</ion-label>
+    </ion-range>
+  </ion-item>
+
+  <ion-item>
+    <ion-input label="Número de comensales" [(ngModel)]="numberOfPeople" type="number" placeholder="Introduzca a dividir"></ion-input>
+  </ion-item>
+
+  <ion-button expand="block" shape="round" class="calculate-button" (click)="calculate()">Calcular</ion-button>
+
+  <div class="result-container">
+    <ion-label>Cantidad a pagar por persona:</ion-label>
+    <div class="result">{{ amountPerPerson | currency: 'EUR' }}</div>
+  </div>
+</div>
